@@ -1,0 +1,175 @@
+/*
+COLORS:
+
+Light green: #7ebdb4
+Medium green: #1f4068
+Dark green: #162447
+
+*/
+
+
+/* сброс  стилей по умполчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+/* Header part */
+.header {
+    height: 100vh;
+    background-image:linear-gradient(to right,  #162447f8,rgba(0, 0, 0, 0.966)), url('../img/me1.png');
+    background-size: auto, contain;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 90%, 0 100%);
+
+}
+
+/* .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px
+}
+
+.logo {
+    height: 150px;
+} */
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-35%, -50%);
+    text-align: center;
+}
+
+
+.typing::after
+{
+  content: "_";
+  animation: type 0.5s infinite;
+}
+
+@keyframes type {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+}
+.heading-primary-main {
+    display: block;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    animation: moveLeft 4s ease-in forwards; 
+
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 16px;
+    opacity: 0;
+    font-weight: 700;
+    letter-spacing: 10px;
+    animation: moveRight 3s ease-in 3s forwards ;
+    padding-top: 2rem;
+
+}
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 10px rgba(0,0,0,.8);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+
+}
+
+.btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveButton 0.5 ease-out 3s;
+}
+
+@keyframes moveButton {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        animation-duration: backwards;
+    }
+}
+
