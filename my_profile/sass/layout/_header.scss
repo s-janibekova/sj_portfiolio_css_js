@@ -1,0 +1,17 @@
+/* Header part */
+.header {
+    height: 100vh;
+    background-image:linear-gradient(to right, #162447f8 ,rgba(0, 0, 0, 0.966)), url('../img/bg-main.jpg');
+    background-size: auto, contain;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 90%, 0 100%);
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-35%, -50%);
+        text-align: center;
+    }
+
+}
