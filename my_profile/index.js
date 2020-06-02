@@ -4,7 +4,7 @@ $( document ).ready(function() {
 });
 
 function typingText() {
-    const texts = ["I am Web developer" , "I Have a lot of hobbies",]
+    const texts = ["I am a developer" , "I Have a lot of hobbies",]
     const display = document.querySelector('.mainText');
     let textIndex = 0;
     let characterIndex = 0;

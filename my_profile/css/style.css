@@ -86,6 +86,83 @@
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+  text-align: center;
+  height: 40%; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #549fb8, #162447f8);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+  .feature-box__list {
+    list-style-type: none;
+    padding: 2.5rem; }
+    .feature-box__list li > a {
+      text-decoration: none;
+      color: #162447f8; }
+
+.card {
+  perspective: 70rem;
+  -moz-perspective: 70rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    color: wheat;
+    height: 50rem;
+    transition: all .8s;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    backface-visibility: hidden; }
+    .card__side--front {
+      background-color: white; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #de95ba, #8378A3); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 30rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #de95ba, #8378A3), url("../img/tdk-karatal.jpeg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #de95ba, #8378A3), url("../img/tdk-karatal.jpeg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #de95ba, #8378A3), url("../img/tdk-karatal.jpeg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: upper;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    text-align: left;
+    width: 55%; }
+  .card__heading-span {
+    padding: 1rem 1rem 1rem;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(222, 149, 186, 0.85), rgba(131, 120, 163, 0.85)); }
+
 @keyframes type {
   0% {
     opacity: 0; }
@@ -196,6 +273,20 @@ body {
   background-color: #dbe2ef;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right, #162447f8, rgba(0, 0, 0, 0.966)), url("../img/section-features.jpg");
+  background-size: auto, contain;
+  transform: skewY(-5deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(5deg); }
+
+.section-hometown {
+  background-color: #dbe2ef;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem; }
 
 /* Header part */
 .header {

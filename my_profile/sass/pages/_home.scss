@@ -3,3 +3,22 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image:linear-gradient(to right, #162447f8 ,rgba(0, 0, 0, 0.966)), url('../img/section-features.jpg');
+    background-size: auto, contain;
+    transform: skewY(-5deg);;
+    margin-top: -10rem;
+
+    & > * {
+        transform: skewY(5deg)
+    }
+}
+
+
+.section-hometown {
+    background-color: $color-blue-light ;
+    padding: 25rem 0 50rem 0;
+    margin-top: -10rem;
+}

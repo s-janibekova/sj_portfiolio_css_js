@@ -1,0 +1,82 @@
+// card functional 
+.card {
+    perspective: 70rem;
+    -moz-perspective: 70rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        // background-color: #f8f3eb;
+        // font-size: 2rem;
+        color: wheat;
+        height: 50rem;
+        transition: all .8s;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+        backface-visibility: hidden;
+
+        &--front {
+            background-color :white;
+    
+        }
+        &--back {
+            transform: rotateY(180deg);
+            
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-pink-light, $color-pink-dark );
+            }
+
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+    // card front styling
+    &__picture {
+        background-size: cover;
+        height: 30rem;
+        background-blend-mode: screen; 
+        -webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+        clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-pink-light, $color-pink-dark ),
+            url('../img/tdk-karatal.jpeg');
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-pink-light, $color-pink-dark ),
+            url('../img/tdk-karatal.jpeg');
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-pink-light, $color-pink-dark ),
+            url('../img/tdk-karatal.jpeg');
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: upper;
+        color: $color-white;
+        position: absolute;
+        right: 0;
+        top: 18rem;
+        text-align: left;
+        width: 55%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1rem 1rem;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-pink-light, .85),
+            rgba($color-pink-dark, .85))
+        }
+    }
+
+}
